@@ -6,5 +6,6 @@ After registration, shortlisted by the committee, and presenting the seminar, th
 This is a python based setup, where *create_applicant.py* create the list of applicants and store it in *applicant.dat*. The main program is *main.py*, which accesses the applicant's info and updates the info into *result.dat*.  You can see the result after running *result.py*.
 
 **For Unit Testing**
+
 First run *mock_file.py* and then run *unit_tes.py*. The *mock_file.py* will create a tets file for unit testing.
 
