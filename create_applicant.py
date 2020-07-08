@@ -5,12 +5,18 @@ import pickle
 
 
 #This program create new applicant files
-
 class save:
     def __init__(self,name,mob,rep):
         self.name=name
-        self.mobile_no=mob
-        self.report=rep
+        self.mob=mob
+        self.rep=rep;
+
+class create_list:
+    def __init__(self,name,mob,rep):
+        b=save(name,mob,rep)
+        f = open("applicant.dat", "ab")
+        pickle.dump(b,f,protocol=2)
+        f.close()
 
     
 if __name__ == '__main__':
@@ -23,11 +29,7 @@ if __name__ == '__main__':
         mob=int(input())
         print("\nEnter Background work :",sep=" ")
         rep=input()
-        f = open("applicant.dat", "ab")
-        b=save(name,mob,rep)
-        pickle.dump(b,f,protocol=2)
-        f.close()
-
+        create_list(name,mob,rep)
         print("\nIf you want to continue Press 1 else Press 0: ",sep=" ")
         a=int(input())
     

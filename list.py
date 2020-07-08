@@ -8,8 +8,8 @@ import pickle
 class save:
     def __init__(self,name,mob,rep):
         self.name=name
-        self.mobile_no=mob
-        self.report=rep
+        self.mob=mob
+        self.rep=rep
 
     
 if __name__ == '__main__':
@@ -21,8 +21,8 @@ if __name__ == '__main__':
         while True:
             s = pickle.load(f2)
             name = s.name.upper()
-            mob = int(s.mobile_no)
-            rep = s.report
+            mob = int(s.mob)
+            rep = s.rep
             print(name.ljust(25,' '),str(mob).ljust(16,' '),rep)
             continue
             
